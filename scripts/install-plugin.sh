@@ -52,6 +52,7 @@ fi
 # Terraform version is used to determine what the target directory should be
 terraform_version=$($terraform version | head -n 1| sed -e 's/Terraform v//')
 check_empty "$terraform_version" "terraform_version not detected"
+# check_empty "$terraform_version" "terraform_version detected"
 
 
 terraform_major=$(echo $terraform_version | tr '.' ' '| awk '{print $1}')
